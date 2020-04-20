@@ -10,6 +10,14 @@ class CashRegister
     @items = []
   end
 
+<<<<<<< HEAD
+=======
+  def total
+    @items.each{ |name, price, quantity| self.total += price * quantity}
+    @total
+  end
+  
+>>>>>>> 9f6a96ca81bab438f0c1133d5eae9a8b40837bb8
   def add_item(name, price, quantity = 1) #each ITEM = [name,price,quantity]
     #binding.pry
     item = [name, price, quantity]
@@ -29,6 +37,7 @@ class CashRegister
     end
   end
     
+<<<<<<< HEAD
   def items
    @items.collect{ |item| (item[0].split * item[2])}.flatten
   end
@@ -37,4 +46,14 @@ class CashRegister
     @total -= @last_transaction
     #@items.pop
   end
+=======
+    def items
+     @items.collect{ |item| (item[0].split * item[2])}.flatten
+    end
+    
+    def void_last_transaction
+      binding.pry
+      #@items.pop
+    end
+>>>>>>> 9f6a96ca81bab438f0c1133d5eae9a8b40837bb8
 end
